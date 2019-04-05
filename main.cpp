@@ -23,21 +23,6 @@ void selection_sort(vector<int>& vet){
     }
 }
 
-void reverse_minimum_sort(vector<int>& vet){
-    int ultimo = vet.size() - 1;
-    for(int i = 0; i <= ultimo; ultimo--){
-        int imaior = ultimo;
-        for(int j = 0; j < ultimo; j++){
-            view_show(vet, {j, imaior, ultimo}, "ygr");
-            if(vet[j] > vet[imaior]){
-                imaior = j;
-                view_show(vet, {j, imaior, ultimo}, "ygr");
-            }
-        }
-        std::swap(vet[imaior], vet[ultimo]);
-    }
-}
-
 void bubble_sort(vector<int>& vet){
     for(int i = vet.size(); i > 0; i--){
         for(int j = 0; j < i - 1; j++){
@@ -128,15 +113,14 @@ int main(){
     for(int i = 0; i < qtd; i++)
         vet[i] = (rand() % (max - min + 1) + min);
 
-//    view_set_dot();
+    //view_set_dot();
     view_set_bar();
-//    view_set_faixa(0, qtd - 1);
+    view_set_faixa(0, qtd - 1);
 
     //selection_sort(vet);
     //bubble_sort(vet);
     //insertion_sort(vet);
-    //mergesort(vet, 0, vet.size());
-    reverse_minimum_sort(vet);
+    mergesort(vet, 0, vet.size());
 
     test_sort(vet);
     view_lock();

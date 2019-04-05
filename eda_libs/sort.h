@@ -2,7 +2,7 @@
 #define SORTVIEW_H
 
 #include <SFML/Graphics.hpp>
-#include "ed_base.h"
+#include "base.h"
 
 #include <queue>
 #include <sstream>
