@@ -113,14 +113,14 @@ int main(){
     for(int i = 0; i < qtd; i++)
         vet[i] = (rand() % (max - min + 1) + min);
 
-    //view_set_dot();
+//    view_set_dot();
     view_set_bar();
-    view_set_faixa(0, qtd - 1);
+//    view_set_faixa(0, qtd - 1);
 
-    //selection_sort(vet);
     //bubble_sort(vet);
     //insertion_sort(vet);
-    mergesort(vet, 0, vet.size());
+    selection_sort(vet);
+    //mergesort(vet, 0, vet.size());
 
     test_sort(vet);
     view_lock();
