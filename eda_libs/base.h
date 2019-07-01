@@ -184,7 +184,7 @@ private:
 
 
     static sf::Font * get_default_font(){
-        const std::string _path = "../projeto/libs/ed_font.ttf";
+        const std::string _path = "../Lista2_Igor-Daniel/eda_libs/ed_font.ttf";
         static sf::Font font;
         static bool init = true;
         if(init){

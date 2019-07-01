@@ -113,9 +113,9 @@ int main(){
     for(int i = 0; i < qtd; i++)
         vet[i] = (rand() % (max - min + 1) + min);
 
-//    view_set_dot();
+//  view_set_dot();
     view_set_bar();
-//    view_set_faixa(0, qtd - 1);
+//  view_set_faixa(0, qtd - 1);
 
     //bubble_sort(vet);
     //insertion_sort(vet);
